@@ -1,0 +1,134 @@
+.promotions {
+  @include styles(padding-top, 32, 76);
+  @include styles(padding-bottom, 36, 102);
+
+  // .promotions__title
+  &__title {
+    @include styles(margin-bottom, 28, 54);
+  }
+
+  // .promotions__swiper
+  &__swiper {
+    padding: 5px;
+    overflow: hidden;
+  }
+  // .promotions__btn
+  &__btn {
+    margin: 36px auto 0 auto;
+    border: 2px solid #000;
+    width: 184px;
+    @include to(700px) {
+      margin-top: 0;
+    }
+  }
+
+  // .promotions__btn-title
+  &__btn-title {
+    color: $black-color;
+  }
+
+  // .promotions__icon-btn
+  &__icon-btn {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+  }
+}
+
+.prom-slide {
+  // .prom-slide__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  // .prom-slide__image
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px 18px 0 0;
+  }
+
+  // .prom-slide__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 18px 18px;
+    padding: 20px 24px 16px 24px;
+    background-color: #fff;
+    height: 100%;
+    box-shadow: 0 0 20px rgba($black-color, .1);
+  }
+
+  // .prom-slide__subtitle
+  &__subtitle {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $black-color;
+    margin-bottom: 16px;
+  }
+
+  // .prom-slide__desc
+  &__desc {
+    font-size: 16px;
+    line-height: 24px;
+    color: $black-color;
+    margin-bottom: 20px;
+    @include from(600px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  // .prom-slide__btn
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+
+    &:hover .prom-slide__text-btn {
+      color: #777;
+    }
+  }
+
+  // .prom-slide__text-btn
+  &__text-btn {
+    font-size: 16px;
+    line-height: 21px;
+    color: $black-color;
+    margin-right: 8px;
+    transition: color 0.3s;
+  }
+
+  // .prom-slide__icon
+  &__icon {
+    width: 20px;
+    height: 16px;
+  }
+
+  // .prom-slide__pagination
+  &__pagination {
+    padding-top: 24px;
+    display: none;
+    @include to(700px) {
+      display: flex;
+    }
+  }
+}
+
+
+.prom-slide__pagination .swiper-pagination-bullet {
+  background-color: #c2c2c2;
+  opacity: 1;
+}
+
+.prom-slide__pagination .swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 4px solid red;
+}
+

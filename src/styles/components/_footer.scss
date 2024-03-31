@@ -1,0 +1,243 @@
+.footer {
+  background-color: $black-color;
+  @include styles(padding-top, 32, 76);
+  @include styles(padding-bottom, 32, 76);
+  // .footer__container
+  &__container {
+    @include from(700px) {
+      display: grid;
+      grid-template-areas:
+    "company company models models"
+    "contacts contacts models models"
+    "clients clients owners owners"
+    "copyright copyright legal  autor";
+    }
+    @include from(1220px) {
+      display: grid;
+      grid-template-areas:
+    "company models clients owners"
+    "contacts models clients owners"
+    "copyright legal autor autor";
+    }
+  }
+
+  // .footer__company
+  &__company {
+    grid-area: company;
+  }
+
+  // .footer__title
+  &__title {
+    color: $white-color;
+  }
+
+  // .footer__contacts
+  &__contacts {
+    grid-area: contacts;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include from(700px) {
+      padding-bottom: 0;
+      padding-top: 24px;
+    }
+  }
+
+  // .footer__contacts-title
+  &__contacts-title {
+    color: $gray-color_footer;
+  }
+
+  // .footer__contacts-wrap
+  &__contacts-wrap {
+    margin-bottom: 16px;
+
+    &:nth-child(2) {
+      width: 100%;
+    }
+  }
+
+  // .footer__contacts-tel
+  &__contacts-tel {
+    color: $white-color;
+    transition: color .3s;
+
+    &:hover {
+      color: darken($white-color, 20%);
+    }
+  }
+
+  // .footer__menu
+  &__menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 250ms grid-template-rows ease;
+    @include from(700px) {
+      display: block;
+    }
+  }
+
+  // .footer__models
+  &__models {
+    grid-area: models;
+  }
+
+  // .footer__range
+  &__range {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    @include from(700px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // .footer__btn
+  &__btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    @include from(700px) {
+      display: none;
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
+
+  // .footer__clients
+  &__clients {
+    grid-area: clients;
+  }
+
+  // .footer__owners
+  &__owners {
+    grid-area: owners;
+  }
+
+  // .footer__copyright
+  &__copyright {
+    grid-area: copyright;
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray-color_footer;
+    margin-bottom: 8px;
+
+    @include from(700px) {
+      margin: 0;
+      padding-top: 59px;
+    }
+  }
+
+  // .footer__legal
+  &__legal {
+    grid-area: legal;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    color: $white-color;
+    margin-bottom: 8px;
+    transition: color .3s;
+
+    &:hover {
+      color: darken($white-color, 20%);
+    }
+
+    @include from(700px) {
+      margin: 0;
+      padding-top: 59px;
+    }
+  }
+
+  // .footer__autor
+  &__autor {
+    grid-area: autor;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: auto;
+    color: $gray-color_footer;
+    @include from(700px) {
+      padding-top: 59px;
+    }
+  }
+
+  // .footer__autor-link
+  &__autor-link {
+    color: $white-color;
+    transition: color .3s;
+
+    &:hover {
+      color: darken($white-color, 20%);
+    }
+  }
+}
+
+.menu__link_foot {
+  color: $white-color;
+  transition: color .3s;
+
+  &:hover {
+    color: darken($white-color, 20%);
+  }
+}
+
+.footer__block {
+  border-bottom: 2px solid $gray-color;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  @include from(700px) {
+    border: none;
+    padding-top: 0;
+  }
+}
+
+.hide {
+  transform: translateY(-101%);
+}
+
+.menu-title {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.menu__list {
+  overflow: hidden;
+  display: grid;
+  row-gap: 8px;
+}
+
+.menu__link {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.show-icon {
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+  }
+}
+
+.hide-list {
+  grid-template-rows: 1fr;
+}
+
+.range-bottom {
+  margin-bottom: 17px;
+}

@@ -1,0 +1,63 @@
+.header {
+  position: fixed;
+  height: var(--height);
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  transition: transform .5s;
+
+  // .header__row
+  &__row {
+    display: flex;
+    align-items: center;
+    padding: 23px 0;
+    max-width: 260px;
+    @include styles(gap, 18, 32);
+    @include from(400px) {
+      max-width: 100%;
+    }
+  }
+
+  // .header__btn
+  &__btn {
+    transition: all 1s;
+  }
+
+  // .header__icon
+  &__icon {
+    @include styles(width, 70, 105);
+    @include styles(height, 23, 37);
+  }
+
+  // .header__company-name
+  &__company-name {
+    @include styles(font-size, 14, 20);
+    @include styles(line-height, 14, 20);
+    font-weight: 700;
+  }
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+
+  // .menu-btn__burger
+  &__burger {
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin: 2px 0;
+    background-color: $dark-color;
+    transition: all 0.3s;
+  }
+}
+
+
+
+

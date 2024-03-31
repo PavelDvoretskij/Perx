@@ -1,0 +1,64 @@
+include ../mixins
+
+section.promotions
+    .wrapper
+        h2.promotions__title.title Акции и предложения
+        .promotions__swiper
+            .swiper-wrapper.promotions__swiper-wrapper
+                .swiper-slide.promotions__prom-slide.prom-slide
+                    .prom-slide__container
+                        img(src='img/Minicard-1.jpg' alt='Слайд').prom-slide__image
+                        .prom-slide__info
+                            h3.prom-slide__subtitle Название акции или предложения
+                            p.prom-slide__desc Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            button.prom-slide__btn
+                                span.prom-slide__text-btn Узнать больше
+                                +arrow("promotions-slide__icon", "#505050")
+
+                .swiper-slide.promotions-slide.prom-slide
+                    .prom-slide__container
+                        img(src='img/Minicard-2.jpg' alt='Слайд').prom-slide__image
+                        .prom-slide__info
+                            h3.prom-slide__subtitle Название акции или предложения
+                            p.prom-slide__desc Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            button.prom-slide__btn
+                                span.prom-slide__text-btn Узнать больше
+                                +arrow("promotions-slide__icon", "#505050")
+
+                .swiper-slide.promotions-slide.prom-slide
+                    .prom-slide__container
+                        img(src='img/Minicard-3.jpg' alt='Слайд').prom-slide__image
+                        .prom-slide__info
+                            h3.prom-slide__subtitle Название акции или предложения
+                            p.prom-slide__desc Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            button.prom-slide__btn
+                                span.prom-slide__text-btn Узнать больше
+                                +arrow("promotions-slide__icon", "#505050")
+
+                .swiper-slide.promotions-slide
+                    .prom-slide__container
+                        img(src='img/Minicard-1.jpg' alt='Слайд').prom-slide__image
+                        .prom-slide__info
+                            h3.prom-slide__subtitle Название акции или предложения
+                            p.prom-slide__desc Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            button.prom-slide__btn
+                                span.prom-slide__text-btn Узнать больше
+                                +arrow("promotions-slide__icon", "#505050")
+
+                .swiper-slide.promotions-slide
+                    .prom-slide__container
+                        img(src='img/Minicard-1.jpg' alt='Слайд').prom-slide__image
+                        .prom-slide__info
+                            h3.prom-slide__subtitle Название акции или предложения
+                            p.prom-slide__desc Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            button.prom-slide__btn
+                                span.prom-slide__text-btn Узнать больше
+                                +arrow("promotions-slide__icon", "#505050")
+            .prom-slide__pagination
+
+        button.promotions__btn.btn
+            span.promotions__btn-title Другие акции
+            +arrow("promotions__icon-btn", "#505050")
+
+
+

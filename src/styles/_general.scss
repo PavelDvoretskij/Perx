@@ -1,0 +1,46 @@
+:root {
+  --height: '';
+}
+
+body {
+  font-family: ProximaNova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: var(--height);
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  @include wrapper;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .3);
+  }
+}
+
+.title{
+  @include styles(font-size, 28, 36);
+  @include styles(line-height, 28, 36);
+  font-weight: 700;
+  text-align: center;
+  color: $black-color;
+}
+
+
